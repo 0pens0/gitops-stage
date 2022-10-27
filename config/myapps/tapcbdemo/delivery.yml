@@ -33,7 +33,7 @@ spec:
       - env:
         - name: JAVA_TOOL_OPTIONS
           value: -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: harbor.tanzuworld.com/tap-stage/tapcbdemo-myapps@sha256:10b7fd102f20ecdf53d046a663b413afe0ab7c323eb6b499633966af2c7da562
+        image: harbor.tanzuworld.com/tap-stage/tapcbdemo-myapps@sha256:fdbcfd58db67b28ddcb14f274a06435ba3d15d146af9d7023c88b48279288e89
         name: workload
         ports:
         - containerPort: 8080
