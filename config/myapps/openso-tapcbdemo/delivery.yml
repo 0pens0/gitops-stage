@@ -16,7 +16,7 @@ spec:
     metadata:
       annotations:
         autoscaling.knative.dev/minScale: "1"
-        boot.spring.io/version: 2.5.12
+        boot.spring.io/version: 2.6.13
         conventions.carto.run/applied-conventions: |-
           spring-boot-convention/spring-boot
           spring-boot-convention/spring-boot-graceful-shutdown
@@ -35,7 +35,7 @@ spec:
       - env:
         - name: JAVA_TOOL_OPTIONS
           value: -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: harbor.tanzuworld.com/tap-stage/openso-tapcbdemo-myapps@sha256:2e826ca17c17405f80bb59f5b90130475590b1413ee48e564addf7aa7973102b
+        image: harbor.tanzuworld.com/tap-stage/openso-tapcbdemo-myapps@sha256:130e6798915d04c9aa8c79bc68e5a1323873ce4ff9366f38dc57d7f75e8d3be1
         name: workload
         ports:
         - containerPort: 8080
