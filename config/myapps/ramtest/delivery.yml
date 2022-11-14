@@ -35,7 +35,7 @@ spec:
       - env:
         - name: JAVA_TOOL_OPTIONS
           value: -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: harbor.tanzuworld.com/tap-stage/ramtest-myapps@sha256:13ec5218ff344acf7df598a43b9e405facc89bf4506851a6ccd8feacfa680460
+        image: harbor.tanzuworld.com/tap-stage/ramtest-myapps@sha256:6e91378e55a61dd93c6deb313f84bec61579bc45cb307288fc5fc3ec610ea3ff
         name: workload
         ports:
         - containerPort: 8080
