@@ -34,7 +34,7 @@ spec:
           value: http://mood-sensors.prod.openso.online/activate
         - name: SENSORS_MEASURE_API
           value: http://mood-sensors.prod.openso.online/measure
-        image: openso.azurecr.io/tap-stage/mood-portal-apps@sha256:beed0f521e28026578d1454fa99dadb1e01d06faac4317bc01754ecc3b54602a
+        image: openso.azurecr.io/tap-stage/mood-portal-apps@sha256:923f7b5e85c065efb63fcdb19c4f7cdb92718d72bb3bf3bd6fb4168167fc834c
         name: workload
         resources: {}
         securityContext:
