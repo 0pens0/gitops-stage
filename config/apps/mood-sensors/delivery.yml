@@ -52,7 +52,7 @@ spec:
       - env:
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.health.probes.enabled="true" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: openso.azurecr.io/tap-stage/mood-sensors-apps@sha256:62961966358d5a296a029bcef9be99ef49fbc495f57d07444e4cd4ade48c25aa
+        image: openso.azurecr.io/tap-stage/mood-sensors-apps@sha256:ff7680dc96d1611e30ed878443401d5ab1b888e9a1619c243e1605781aea9bc4
         livenessProbe:
           httpGet:
             path: /livez
