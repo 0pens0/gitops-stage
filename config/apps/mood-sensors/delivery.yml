@@ -28,10 +28,10 @@ spec:
           spring-boot-convention/app-live-view-appflavour-check
           spring-boot-convention/app-live-view-connector-boot
           spring-boot-convention/app-live-view-appflavours-boot
-          spring-boot-convention/service-intent-mysql
+          spring-boot-convention/service-intent-postgres
           appliveview-sample/app-live-view-appflavour-check
         developer.conventions/target-containers: workload
-        services.conventions.carto.run/mysql: mysql-connector-java/8.0.30
+        services.conventions.carto.run/postgres: postgresql/42.2.14
       labels:
         apis.apps.tanzu.vmware.com/register-api: "true"
         app.kubernetes.io/component: run
@@ -41,7 +41,7 @@ spec:
         apps.tanzu.vmware.com/workload-type: dekt-api
         carto.run/workload-name: mood-sensors
         conventions.carto.run/framework: spring-boot
-        services.conventions.carto.run/mysql: workload
+        services.conventions.carto.run/postgres: workload
         tanzu.app.live.view: "true"
         tanzu.app.live.view.application.actuator.path: actuator
         tanzu.app.live.view.application.actuator.port: "8080"
@@ -52,7 +52,7 @@ spec:
       - env:
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.health.probes.enabled="true" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: openso.azurecr.io/tap-stage/mood-sensors-apps@sha256:a47aefefab81d2a31c269c0f9b2468023c653ad79ad25e9de491de02d9a49c88
+        image: openso.azurecr.io/tap-stage/mood-sensors-apps@sha256:7c2e2bc4afb3c14a1bdcad5592682c47c0a31da495c5eb59d4a4b073812df746
         livenessProbe:
           httpGet:
             path: /livez
